@@ -1,13 +1,339 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hicham Intazqa | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hicham Intazga | Ingénieur Cybersécurité SOC & Threat Intelligence</title>
+    <meta name="description"
+        content="Portfolio de Hicham Intazga, élève ingénieur en cybersécurité spécialisé en SOC et Threat Intelligence.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body style="font-family: Arial; text-align:center; padding:50px;">
-  <h1>Salut, je suis Hicham 👋</h1>
-  <h2>Développeur Web | Flutter | Cybersécurité</h2>
-  <p>Bienvenue sur mon portfolio professionnel.</p>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <header>
+        <nav>
+            <div class="logo">Hicham Intazga<span>.</span></div>
+            <ul>
+                <li><a href="#about">Profil</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i data-lucide="menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <!-- <div class="badge fade-in">Disponible en Août 2026</div> -->
+                <h1 class="fade-in">Hicham <span>Intazga</span></h1>
+                <h2 class="fade-in">Ingénieur Cybersécurité <br><span>SOC & Threat Intelligence</span></h2>
+                <p class="fade-in">Expert en détection d'incidents, enrichissement d'IOC et automatisation de
+                    traitements de données de sécurité.</p>
+                <div class="hero-btns fade-in">
+                    <a href="#projects" class="btn-primary">Voir mes projets</a>
+                    <a href="mailto:intazgahicham@gmail.com" class="btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="cyber-circle"></div>
+                <div class="cyber-grid"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">01. Profil</span>
+                    <h2 class="section-title">À propos de moi</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Élève ingénieur en cybersécurité spécialisé en <strong>SOC et Threat Intelligence</strong>.
+                            Passionné par l’analyse de menaces et la défense proactive, j'ai développé une expertise
+                            solide dans l’automatisation des pipelines CTI et la supervision de logs.</p>
+                        <p>Basé à <strong>Casablanca, Maroc</strong>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <h3>SOC</h3>
+                                <p>Level 1 Certified</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>TI</h3>
+                                <p>Threat Intel Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Experience & Education -->
+        <section id="experience" class="timeline-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">02. Parcours</span>
+                    <h2 class="section-title">Expérience & Formation</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <span class="category">Expérience</span>
+                            <h3>Stagiaire PFE Cybersécurité</h3>
+                            <h4>BLUESEC | Casablanca</h4>
+                            <p>Mise en place d’un dispositif de Threat Intelligence pour la collecte et l’enrichissement
+                                d’IOC/CVE. Automatisation Python et veille sur Telegram/Dark Web.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 - Présent</div>
+                        <div class="timeline-content">
+                            <span class="category education">Formation</span>
+                            <h3>Cycle Ingénieur -- Sécurité IT</h3>
+                            <h4>ENSIA | Taroudant</h4>
+                            <p>Intelligence Artificielle et Sciences des Données, spécialisation Sécurité IT et
+                                Confiance Numérique.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <span class="category">Expérience</span>
+                            <h3>Stagiaire Développeur Full-Stack</h3>
+                            <h4>ONEE -- Branche Eau | Guelmim</h4>
+                            <p>Développement d’une application de suivi (API REST, PHP, MySQL, Flutter). Analyse des
+                                besoins et tests.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-content">
+                            <span class="category education">Formation</span>
+                            <h3>DUT Informatique</h3>
+                            <h4>EST | Guelmim</h4>
+                            <p>Bases solides en algorithmique, réseaux et développement logiciel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">03. Expertise</span>
+                    <h2 class="section-title">Compétences Techniques</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i data-lucide="shield"></i>
+                            <h3>SOC & Ops</h3>
+                        </div>
+                        <ul>
+                            <li>Wazuh / ELK / Splunk</li>
+                            <li>Snort (IDS/IPS)</li>
+                            <li>Wireshark / Autopsy</li>
+                            <li>Investigation d'incidents</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i data-lucide="target"></i>
+                            <h3>Threat Intel</h3>
+                        </div>
+                        <ul>
+                            <li>MISP / Rules Sigma</li>
+                            <li>Collecte d'IOC & CVE</li>
+                            <li>Scoring de criticité</li>
+                            <li>OSINT & Veille</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i data-lucide="code-2"></i>
+                            <h3>Développement</h3>
+                        </div>
+                        <ul>
+                            <li>Python (Automation)</li>
+                            <li>PHP / JS / SQL</li>
+                            <li>API REST / OAuth 2.0</li>
+                            <li>Bash Scripting</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <i data-lucide="cloud"></i>
+                            <h3>Cloud & Infra</h3>
+                        </div>
+                        <ul>
+                            <li>AWS (IAM, VPC, S3)</li>
+                            <li>Linux / Docker</li>
+                            <li>VMware / VirtualBox</li>
+                            <li>CI/CD Basics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">04. Portfolio</span>
+                    <h2 class="section-title">Projets Marquants</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                                alt="CTI Platform">
+                            <div class="project-overlay">
+                                <a href="#"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>MISP</span>
+                                <span>CTI</span>
+                            </div>
+                            <h3>Threat Intelligence Platform</h3>
+                            <p>Pipeline CTI pour la collecte, normalisation et enrichissement d’IOC/CVE via Python et
+                                Regex.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800"
+                                alt="SOC Lab">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>Wazuh</span>
+                                <span>pfSense</span>
+                                <span>ELK</span>
+                            </div>
+                            <h3>SOC Lab - Supervision</h3>
+                            <p>Environnement complet de supervision avec corrélation d’événements et analyse d’alertes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+                                alt="AWS Cloud">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>AWS</span>
+                                <span>Security</span>
+                                <span>IAM</span>
+                            </div>
+                            <h3>Architecture AWS Sécurisée</h3>
+                            <p>Conception d’un réseau segmenté avec IAM, CloudWatch et sécurisation des ressources
+                                RDS/S3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certs" class="certs-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">05. Reconnaissance</span>
+                    <h2 class="section-title">Certifications</h2>
+                </div>
+                <div class="certs-list">
+                    <div class="cert-item">
+                        <i data-lucide="award"></i>
+                        <div>
+                            <h4>ISO/IEC 27001:2022 Associate</h4>
+                            <p>SkillFront • Oct. 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i data-lucide="award"></i>
+                        <div>
+                            <h4>SOC Level 1</h4>
+                            <p>TryHackMe • Août 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Prêt à sécuriser vos infrastructures ?</h2>
+                    <p>Je suis à la recherche de nouveaux défis en cybersécurité. Discutons de vos besoins.</p>
+                    <div class="contact-links">
+                        <a href="mailto:intazgahicham@gmail.com" class="contact-btn">
+                            <i data-lucide="mail"></i> intazgahicham@gmail.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/hicham-intazga-a84a7b279/" class="contact-btn"
+                            target="_blank">
+                            <i data-lucide="linkedin"></i> LinkedIn
+                        </a>
+                        <a href="tel:+212623414552" class="contact-btn">
+                            <i data-lucide="phone"></i> +212 623414552
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Hicham Intazga. Tous droits réservés.</p>
+                <div class="social-icons">
+                    <a href="#"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/hicham-intazga-a84a7b279/"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
