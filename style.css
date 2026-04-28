@@ -627,6 +627,42 @@ section {
     font-size: 0.9rem;
 }
 
+.cert-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cert-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem !important;
+    color: var(--secondary) !important;
+    opacity: 0.8;
+}
+
+.cert-verify {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: var(--transition);
+    width: fit-content;
+}
+
+.cert-verify i {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.cert-verify:hover {
+    color: var(--text-main);
+    transform: translateX(5px);
+}
+
 /* Contact */
 .contact-box {
     background: linear-gradient(135deg, var(--glass) 0%, rgba(0, 255, 157, 0.05) 100%);
