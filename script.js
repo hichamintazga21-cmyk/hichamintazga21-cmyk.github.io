@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        if (themeToggle) themeToggle.checked = true;
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    }
+
     // Custom Cursor Glow
     const cursor = document.querySelector('.cursor-glow');
     document.addEventListener('mousemove', (e) => {
@@ -131,6 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
             project4_desc: "Étude approfondie de la sécurité des applications mobiles : stockage local, authentification et sécurisation des communications réseau.",
             project5_title: "Architecture AWS Sécurisée",
             project5_desc: "Conception d’une architecture AWS avec segmentation réseau, IAM, CloudWatch et CloudTrail pour une supervision continue.",
+            project6_title: "Système d’Authentification Blockchain",
+            project6_desc: "Développement d’une application web sécurisée implémentant l’authentification OAuth 2.0 et la traçabilité des transactions basée sur blockchain avec la technologie Multichain (PHP, MySQL, JavaScript).",
+            project7_title: "Gestion de Bibliothèque Numérique",
+            project7_desc: "Construction d’une application web responsive pour la gestion complète des opérations de bibliothèque avec design UI/UX moderne et fonctionnalités de recherche efficaces (Laravel, PHP, UML).",
+            project8_title: "Gestion des Centres de Formation",
+            project8_desc: "Application web pour la gestion des stagiaires, formateurs et salles (PHP, MySQL, UML).",
+            project9_title: "Système ONEE (Eau)",
+            project9_desc: "Écosystème mobile + web pour le suivi des consommations, factures et interventions (Flutter, Laravel, API REST).",
             certs_subtitle: "05. Reconnaissance",
             certs_title: "Certifications",
             cert1_name: "ISO/IEC 27001:2022 Associate",
@@ -204,6 +235,14 @@ document.addEventListener('DOMContentLoaded', () => {
             project4_desc: "In-depth study of mobile application security: local storage, authentication, and securing network communications.",
             project5_title: "Secure AWS Architecture",
             project5_desc: "Design of an AWS architecture with network segmentation, IAM, CloudWatch, and CloudTrail for continuous monitoring.",
+            project6_title: "Blockchain Authentication System",
+            project6_desc: "Development of a secure web application implementing OAuth 2.0 authentication and blockchain-based transaction traceability using Multichain technology (PHP, MySQL, JavaScript).",
+            project7_title: "Digital Library Management",
+            project7_desc: "Construction of a responsive web application for complete library operations management with modern UI/UX design and efficient search features (Laravel, PHP, UML).",
+            project8_title: "Training Center Management",
+            project8_desc: "Web application for managing trainees, trainers, and rooms (PHP, MySQL, UML).",
+            project9_title: "ONEE System (Water)",
+            project9_desc: "Mobile + web ecosystem for tracking consumption, invoices, and interventions (Flutter, Laravel, REST API).",
             certs_subtitle: "05. Recognition",
             certs_title: "Certifications",
             cert1_name: "ISO/IEC 27001:2022 Associate",

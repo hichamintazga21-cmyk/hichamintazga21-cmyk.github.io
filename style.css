@@ -9,6 +9,37 @@
     --glass: rgba(30, 41, 59, 0.5);
     --glass-border: rgba(255, 255, 255, 0.1);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --header-bg: rgba(10, 12, 16, 0.8);
+    --dropdown-bg: rgba(10, 12, 16, 0.95);
+    --hero-gradient: linear-gradient(rgba(10, 12, 16, 0.8), rgba(10, 12, 16, 0.8));
+}
+
+body.light-mode {
+    --bg-dark: #f0f4f8;
+    --bg-darker: #e1e7f0;
+    --primary: #059669;
+    --primary-glow: rgba(5, 150, 105, 0.2);
+    --secondary: #0284c7;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --glass: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --header-bg: rgba(240, 244, 248, 0.8);
+    --dropdown-bg: rgba(240, 244, 248, 0.95);
+    --hero-gradient: linear-gradient(rgba(240, 244, 248, 0.8), rgba(240, 244, 248, 0.8));
+}
+
+body.light-mode .cursor-glow {
+    background: radial-gradient(circle, rgba(5, 150, 105, 0.1) 0%, transparent 70%);
+}
+
+body.light-mode .cyber-circle {
+    opacity: 0.15;
+    border-color: var(--primary);
+}
+
+body.light-mode .cyber-grid {
+    opacity: 0.5;
 }
 
 * {
@@ -63,7 +94,7 @@ header {
 }
 
 header.scrolled {
-    background: rgba(10, 12, 16, 0.8);
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0;
@@ -119,7 +150,7 @@ nav {
     top: 100%;
     right: 0;
     margin-top: 0.5rem;
-    background: rgba(10, 12, 16, 0.95);
+    background: var(--dropdown-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border-radius: 4px;
@@ -162,6 +193,58 @@ nav {
     border-color: var(--primary);
     color: var(--primary);
     box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Theme Switch Styles */
+.switch {
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    --background: #1e293b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px var(--secondary);
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff;
+    background: #fff;
 }
 
 .logo {
@@ -227,7 +310,7 @@ nav ul a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    background: linear-gradient(rgba(10, 12, 16, 0.8), rgba(10, 12, 16, 0.8)), url('hero-bg.png');
+    background: var(--hero-gradient), url('hero-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
